@@ -15,7 +15,10 @@ public class Demo implements Runnable {
             while (true) {    //thread-0
                 synchronized (Demo.class) {
                     if (num > 0) {
-                        try{Thread.sleep(100);}catch(InterruptedException e){}
+                        try {
+                            Thread.sleep(100);
+                        } catch (InterruptedException e) {
+                        }
                         System.out.println(Thread.currentThread().getName() + "......" + num);
                         num--;
                     }
